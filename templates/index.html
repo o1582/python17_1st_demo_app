@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python17(1st demo app)</title>
+<link rel="stylesheet" href="/static/instagram.css">
+<style>
+.insta {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+.insta > div {
+    position: relative;
+    width: 8%;
+    height: auto;
+    margin: 1%;
+    overflow: hidden;
+}
+.main {
+    margin:0 auto
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <h1>Python17(1st demo app)</h1>
+    <div class="insta">
+    {% for url in img_url_list %}
+            <div class="card">
+                <div class="card-image filter-xpro-ii">
+                <img src="{{url}}" >
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+</div>
+</body>
+</html>
